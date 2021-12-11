@@ -1,0 +1,205 @@
+:root{
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --dark-blue-main: hsl(217, 54%, 11%);
+  --dark-blue-card: hsl(216, 50%, 16%);
+  --dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+}
+
+@media (max-width: 1080px){
+  html{
+    font-size: 93.75%;
+  }
+}
+@media (max-width: 720px){
+  html{
+    font-size: 87.5%;
+  }
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: var(--dark-blue-main);
+  color: var(--white);
+  font-family: 'Outfit', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.main-card {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0.5rem 0.5rem 2rem black;
+  padding: 1rem;
+  height: 600px;
+  width: 350px;
+  border-radius: 1rem;
+  background-color: var(--dark-blue-card);
+}
+
+@media (max-width: 320px){
+  .card{
+    width: 250px;
+    height: 450px;
+  }
+}
+
+.img-equilibrium{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-image: url(/images/image-equilibrium.jpg);
+  background-size: contain;
+  margin-top: 10px;
+  height: 300px;
+  width: 300px;
+  border-radius: 1rem;
+
+}
+
+@media (max-width: 320px){
+  .img-equilibrium{
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.cyan-color{
+  height: 300px;
+  width: 300px;
+  border-radius: 1rem;
+  opacity: 0;
+  background-color: var(--cyan);
+  transition: opacity .2s linear;
+}
+
+@media (max-width: 320px){
+  .cyan-color{
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.view-img{
+  background-image: url(/images/icon-view.svg);
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  opacity: 0;
+  transition: opacity .2s linear;
+}
+
+
+.img-equilibrium:hover .view-img{
+  opacity: 1;
+  cursor: pointer;
+}
+
+.img-equilibrium:hover .cyan-color{
+  opacity: 0.1;
+  cursor: pointer;
+}
+
+
+.card-title{
+  align-self: flex-start;
+  margin-top: 1rem;
+}
+
+.card-description{
+  font-weight: 100;
+  margin-top: 0.5rem;
+}
+
+.more-info{
+  display: flex;
+  margin-top: 1rem;
+}
+
+.card-description-cost{
+  display: flex;
+}
+
+.card-description-cost > p {
+  color: var(--cyan);
+  margin-left: 0.5rem;
+}
+
+.time{
+  display: flex;
+  margin-left: 7rem;
+}
+
+@media (max-width: 320px){
+  .time{
+    margin-left: 3rem;
+
+  }
+}
+
+.time > p {
+  margin-left: 0.5rem;
+}
+
+.linha{
+  margin-top: 1.5rem;
+  width: 90%;
+  border-color: var(--dark-blue-line);
+}
+
+.card-footer{
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.card-footer > img{
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  border: 1px solid;
+  border-color: var(--white);
+}
+
+.card-footer > p{
+  margin-top: 1rem;
+  margin-left: 1.5rem;
+
+}
+
+.card-footer > p > a {
+  color: var(--soft-blue);
+}
