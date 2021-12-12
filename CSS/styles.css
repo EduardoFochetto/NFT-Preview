@@ -7,17 +7,6 @@
   --white: hsl(0, 0%, 100%);
 }
 
-@media (max-width: 1080px){
-  html{
-    font-size: 93.75%;
-  }
-}
-@media (max-width: 720px){
-  html{
-    font-size: 87.5%;
-  }
-}
-
 *{
   padding: 0;
   margin: 0;
@@ -49,7 +38,7 @@ a {
   color: var(--white);
 }
 
-.main-card {
+main{
   height: 100%;
   width: 100%;
   display: flex;
@@ -69,32 +58,18 @@ a {
   background-color: var(--dark-blue-card);
 }
 
-@media (max-width: 320px){
-  .card{
-    width: 250px;
-    height: 450px;
-  }
-}
-
 .img-equilibrium{
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
-  background-image: url(/NFT-Preview/images/image-equilibrium.jpg);
+  background-image: url(/NFT-Preview/img/image-equilibrium.jpg);
   background-size: contain;
   margin-top: 10px;
   height: 300px;
   width: 300px;
   border-radius: 1rem;
 
-}
-
-@media (max-width: 320px){
-  .img-equilibrium{
-    width: 200px;
-    height: 200px;
-  }
 }
 
 .cyan-color{
@@ -106,22 +81,14 @@ a {
   transition: opacity .2s linear;
 }
 
-@media (max-width: 320px){
-  .cyan-color{
-    width: 200px;
-    height: 200px;
-  }
-}
-
 .view-img{
-  background-image: url(/NFT-Preview/images/icon-view.svg);
+  background-image: url(/NFT-Preview/img/icon-view.svg);
   position: absolute;
   height: 50px;
   width: 50px;
   opacity: 0;
   transition: opacity .2s linear;
 }
-
 
 .img-equilibrium:hover .view-img{
   opacity: 1;
@@ -132,7 +99,6 @@ a {
   opacity: 0.1;
   cursor: pointer;
 }
-
 
 .card-title{
   align-self: flex-start;
@@ -163,18 +129,11 @@ a {
   margin-left: 7rem;
 }
 
-@media (max-width: 320px){
-  .time{
-    margin-left: 3rem;
-
-  }
-}
-
 .time > p {
   margin-left: 0.5rem;
 }
 
-.linha{
+hr{
   margin-top: 1.5rem;
   width: 90%;
   border-color: var(--dark-blue-line);
@@ -203,3 +162,34 @@ a {
 .card-footer > p > a {
   color: var(--soft-blue);
 }
+
+@media (max-width: 1080px){
+  html{
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px){
+  html{
+    font-size: 87.5%;
+  }
+}
+
+@media (max-width: 320px){
+  .card{
+    width: 250px;
+    height: 450px;
+  }
+  .img-equilibrium{
+    width: 200px;
+    height: 200px;
+  }
+  .cyan-color{
+    width: 200px;
+    height: 200px;
+  }
+  .time{
+    margin-left: 3rem;
+  }
+}
+
